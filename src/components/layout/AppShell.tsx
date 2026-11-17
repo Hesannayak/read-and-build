@@ -34,10 +34,11 @@ function Header({ onMenu }: { onMenu: () => void }) {
     <header className="sticky top-0 z-40 bg-card/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-3 px-3 sm:px-4">
         <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open menu" onClick={onMenu}><Menu /></Button>
-        <Link to="/" className="flex items-center gap-2 text-primary">
-          <Palm className="h-8 w-8" /><span className="hidden font-display text-2xl font-extrabold uppercase tracking-wide text-heading sm:inline">Leonida Line</span>
+        <Link to="/" className="flex shrink-0 items-center gap-2 text-primary sm:gap-2.5">
+          <Palm className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" /><span className="whitespace-nowrap font-display text-xl font-extrabold uppercase leading-none tracking-wider text-heading sm:text-2xl">Leonida Line</span>
         </Link>
-        <form className="mx-auto w-full max-w-xs transition-all focus-within:max-w-md" onSubmit={(e) => { e.preventDefault(); nav({ to: "/search", search: { q } }); }}>
+        <Button asChild variant="ghost" size="icon" className="ml-auto sm:hidden" aria-label="Search"><Link to="/search" search={{ q: undefined }}><Search /></Link></Button>
+        <form className="mx-auto hidden w-full max-w-xs sm:block transition-all focus-within:max-w-md" onSubmit={(e) => { e.preventDefault(); nav({ to: "/search", search: { q } }); }}>
           <label className="relative block">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input ref={ref} value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search Leonida…" aria-label="Search" className="h-10 border-input bg-inset pl-9 pr-8" />

@@ -47,7 +47,7 @@ export function CategoryChip({ category }: { category: Category }) {
 export function Avatar({ user, size = 28 }: { user: Pick<User, "handle">; size?: number | undefined }) {
   const hue = [...user.handle].reduce((a, c) => a + c.charCodeAt(0), 0) % 6;
   const bg = ["bg-region-vice", "bg-region-keys", "bg-region-grass", "bg-region-ambrosia", "bg-neon", "bg-sunset"][hue];
-  return <span style={{ width: size, height: size }} className={cn("inline-flex shrink-0 items-center justify-center rounded-full font-sans text-[11px] font-bold uppercase text-primary-foreground", bg)}>{user.handle.slice(0, 2)}</span>;
+  return <span aria-hidden="true" style={{ width: size, height: size, fontSize: Math.max(9, Math.round(size * 0.36)) }} className={cn("inline-flex shrink-0 select-none items-center justify-center rounded-full font-sans font-bold uppercase leading-none tracking-wide text-primary-foreground", bg)}>{user.handle.slice(0, 2)}</span>;
 }
 export function UserChip({ user, size }: { user: User; size?: number | undefined }) {
   return (
