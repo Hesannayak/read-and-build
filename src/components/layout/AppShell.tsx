@@ -35,7 +35,7 @@ function Header({ onMenu }: { onMenu: () => void }) {
       <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-3 px-3 sm:px-4">
         <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open menu" onClick={onMenu}><Menu /></Button>
         <Link to="/" className="flex items-center gap-2 text-primary">
-          <Palm className="h-8 w-8" /><span className="hidden font-display text-lg uppercase tracking-wide text-heading sm:inline">Leonida Line</span>
+          <Palm className="h-8 w-8" /><span className="hidden font-display text-2xl font-extrabold uppercase tracking-wide text-heading sm:inline">Leonida Line</span>
         </Link>
         <form className="mx-auto w-full max-w-xs transition-all focus-within:max-w-md" onSubmit={(e) => { e.preventDefault(); nav({ to: "/search", search: { q } }); }}>
           <label className="relative block">

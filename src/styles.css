@@ -73,8 +73,8 @@
 }
 
 @theme inline {
-  --font-display: "Archivo Black", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Big Shoulders Display", system-ui, sans-serif;
+  --font-sans: "Jost", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --color-surface: var(--surface);
   --color-inset: var(--inset);
@@ -153,7 +153,7 @@
     font-size: 16px;
     line-height: 1.6;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); color: var(--color-heading); line-height: 1.15; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 800; letter-spacing: 0.02em; color: var(--color-heading); line-height: 1.05; }
   :focus-visible { outline: 2px solid var(--color-neon); outline-offset: 2px; }
 }
 
