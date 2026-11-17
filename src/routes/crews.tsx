@@ -2,10 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { seo } from "@/lib/seo";
+import crewsArt from "@/assets/crews-night-cruise.jpg";
+import { SectionHero } from "@/components/forum/SectionHero";
 import { getCrews, SPOILER_ORDER } from "@/lib/api";
 import { useSession } from "@/hooks/useSession";
 import { CrewCard } from "@/components/forum/cards";
-import { EmptyState, PageHeader, SPOILER_LABEL } from "@/components/forum/primitives";
+import { EmptyState, SPOILER_LABEL } from "@/components/forum/primitives";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -25,7 +27,7 @@ function Crews() {
   const list = data?.filter((c) => (!kind || c.kind === kind) && c.name.toLowerCase().includes(q.toLowerCase())) ?? [];
   return (
     <div className="space-y-4">
-      <PageHeader title="Crews"><Button onClick={() => { setSent(false); setOpen(true); }}>Request a Crew</Button></PageHeader>
+      <SectionHero src={crewsArt} alt="Illustrated friends hanging out on an SUV and pink convertible outside a neon club" title="Crews" sub="Find your people. Roll out together."><Button onClick={() => { setSent(false); setOpen(true); }}>Request a Crew</Button></SectionHero>
       <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search crews…" className="bg-inset" aria-label="Search crews" />
       <div className="flex flex-wrap gap-2">{KINDS.map(([k, l]) => <Button key={k} size="sm" variant={kind === k ? "outline" : "ghost"} onClick={() => setKind(kind === k ? null : k)}>{l}</Button>)}</div>
       <div className="grid gap-3 sm:grid-cols-2">

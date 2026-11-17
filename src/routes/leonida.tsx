@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { seo } from "@/lib/seo";
+import leonidaArt from "@/assets/leonida-marina-heli.jpg";
+import { SectionHero } from "@/components/forum/SectionHero";
 import { getRegions } from "@/lib/api";
-import { PageHeader, regionBand } from "@/components/forum/primitives";
+import { regionBand } from "@/components/forum/primitives";
 import { Palm } from "@/components/forum/Palm";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
@@ -13,7 +15,7 @@ function Hub() {
   const { data } = useQuery({ queryKey: ["regions"], queryFn: getRegions });
   return (
     <div>
-      <PageHeader title="Leonida" sub="Six regions. Endless trouble." />
+      <SectionHero src={leonidaArt} alt="Illustrated woman on a mangrove dock watching a helicopter over the bay skyline" title="Leonida" sub="Six regions. Endless trouble." />
       <div className="grid gap-4 sm:grid-cols-2">
         {!data && Array.from({ length: 6 }, (_, i) => <Skeleton key={i} className="h-44 bg-card" />)}
         {data?.map((r) => (

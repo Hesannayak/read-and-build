@@ -3,9 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { Trophy } from "lucide-react";
 import { seo } from "@/lib/seo";
+import clipsArt from "@/assets/clips-jet-speedboat.jpg";
+import { SectionHero } from "@/components/forum/SectionHero";
 import { getClips, getEvents } from "@/lib/api";
 import { ClipCard } from "@/components/forum/cards";
-import { EmbedPlayer, EmptyState, EventCountdown, PageHeader, ReactionBar, SpoilerBlur, UserChip } from "@/components/forum/primitives";
+import { EmbedPlayer, EmptyState, EventCountdown, ReactionBar, SpoilerBlur, UserChip } from "@/components/forum/primitives";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -24,7 +26,7 @@ function Clips() {
   const cur = clips?.find((c) => c.id === open);
   return (
     <div className="space-y-5">
-      <PageHeader title="Clips & Photos" />
+      <SectionHero src={clipsArt} alt="Illustrated jet flying low over a speedboat at sunset" title="Clips & Photos" sub="Stunts, fails and photo-mode shots from the community." />
       {contest && (
         <div className="sunset-border flex flex-wrap items-center justify-between gap-3 rounded-xl p-4">
           <div><p className="flex items-center gap-2 font-display text-heading"><Trophy className="h-5 w-5 text-sunset" />Weekly Contest: {contest.theme}</p><p className="text-sm">Ends in <EventCountdown to={contest.endsAt} className="text-sunset" /></p></div>

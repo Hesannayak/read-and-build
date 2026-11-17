@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { seo } from "@/lib/seo";
-import sunsetPalms from "@/assets/home-sunset-palms.jpg";
+import heroDuo from "@/assets/hero-duo-muscle-car.jpg";
+import { SectionHero } from "@/components/forum/SectionHero";
 import { getRegions, getTags, SPOILER_ORDER } from "@/lib/api";
 import { useSession } from "@/hooks/useSession";
 import { TopicList } from "@/components/forum/TopicList";
@@ -44,14 +45,7 @@ function Home() {
   const [filter, setFilter] = useState<FeedFilter>({ tab: "latest" });
   return (
     <div className="space-y-4">
-      <section className="relative overflow-hidden rounded-2xl border border-border">
-        <img src={sunsetPalms} alt="Palm trees framing a cream sun setting over a pink ocean" width={1600} height={640} className="h-44 w-full object-cover sm:h-56" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6">
-          <h1 className="text-2xl uppercase tracking-wide sm:text-4xl">Tonight in Leonida</h1>
-          <p className="text-sm text-foreground/90 sm:text-base">Clips, guides and spoiler-safe story talk.</p>
-        </div>
-      </section>
+      <SectionHero src={heroDuo} alt="Illustrated pair lounging on a red muscle car at sunset by the Vice City shore" title="Tonight in Leonida" sub="Clips, guides and spoiler-safe story talk." tall eager />
       {!user && (
         <div className="sunset-border flex flex-wrap items-center justify-between gap-3 rounded-xl p-4">
           <div><p className="font-display text-heading">Welcome to Leonida Line.</p><p className="text-sm text-muted-foreground">Spoiler-safe talk, clips and crews for GTA 6 fans.</p></div>
