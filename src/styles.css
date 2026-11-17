@@ -168,9 +168,7 @@
   background-image: repeating-linear-gradient(0deg, oklch(0 0 0 / 35%) 0 2px, transparent 2px 4px);
 }
 @utility nav-active {
-  border-left: 3px solid var(--color-primary);
   background: oklch(0.694 0.175 6.4 / 12%);
-  box-shadow: inset 8px 0 16px -8px oklch(0.694 0.175 6.4 / 55%);
   color: var(--color-primary);
 }
 @utility unread-title {

@@ -68,7 +68,7 @@ function Header({ onMenu }: { onMenu: () => void }) {
   );
 }
 
-const itemCls = "flex items-center rounded-r-md border-l-[3px] border-transparent px-3 py-2 text-sm hover:bg-strong/40 hover:text-heading";
+const itemCls = "flex items-center rounded-md px-3 py-2 text-sm hover:bg-strong/40 hover:text-heading";
 
 function LeftNav({ onNavigate }: { onNavigate?: () => void }) {
   const { user } = useSession();

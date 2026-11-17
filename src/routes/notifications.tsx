@@ -24,7 +24,8 @@ function Notes() {
       <ul className="space-y-2">
         {q.data?.map((n) => { const I = ICON[n.kind]; const unread = !n.read && !allRead; return (
           <li key={n.id}>
-            <Link to={n.href} className={cn("flex items-center gap-3 rounded-2xl border-l-4 bg-card px-4 py-3 hover:bg-strong/40", unread ? "border-primary" : "border-transparent opacity-80")}>
+            <Link to={n.href} className={cn("flex items-center gap-3 rounded-xl px-3 py-3 hover:bg-strong/40", !unread && "opacity-80")}>
+              <span className={cn("h-2 w-2 shrink-0 rounded-full", unread ? "bg-neon" : "bg-transparent")} />
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-inset"><I className="h-4 w-4 text-primary" /></span>
               <span className="flex-1 text-sm">{n.text}</span><RelTime iso={n.createdAt} />
             </Link>
