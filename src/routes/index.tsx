@@ -48,7 +48,7 @@ function Home() {
       <SectionHero src={heroDuo} alt="Illustrated pair lounging on a red muscle car at sunset by the Vice City shore" title="Tonight in Leonida" sub="Clips, guides and spoiler-safe story talk." tall eager />
       {!user && (
         <div className="sunset-border flex flex-wrap items-center justify-between gap-3 rounded-xl p-4">
-          <div><p className="font-display text-heading">Welcome to Leonida Line.</p><p className="text-sm text-muted-foreground">Spoiler-safe talk, clips and crews for GTA 6 fans.</p></div>
+          <div><p className="font-display text-heading">Welcome to GTA6 Forum.</p><p className="text-sm text-muted-foreground">Spoiler-safe talk, clips and crews for GTA 6 fans.</p></div>
           <Button asChild><Link to="/auth">Join the community</Link></Button>
         </div>
       )}

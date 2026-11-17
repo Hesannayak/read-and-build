@@ -2,8 +2,8 @@ import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Bell, ChevronDown, Menu, Plus, Search, Shield } from "lucide-react";
-import { Palm } from "@/components/forum/Palm";
 import { Avatar, EventCountdown } from "@/components/forum/primitives";
+import logoUrl from "@/assets/logo-sunset-badge-v2.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
@@ -35,7 +35,7 @@ function Header({ onMenu }: { onMenu: () => void }) {
       <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-3 px-3 sm:px-4">
         <Button variant="ghost" size="icon" className="lg:hidden" aria-label="Open menu" onClick={onMenu}><Menu /></Button>
         <Link to="/" className="flex shrink-0 items-center gap-2 text-primary sm:gap-2.5">
-          <Palm className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" /><span className="whitespace-nowrap font-display text-xl font-extrabold uppercase leading-none tracking-wider text-heading sm:text-2xl">Leonida Line</span>
+          <img src={logoUrl} alt="GTA6 Forum logo" width={1024} height={1024} className="h-9 w-9 shrink-0 rounded-full sm:h-10 sm:w-10" /><span className="whitespace-nowrap font-display text-xl font-extrabold uppercase leading-none tracking-wider text-heading sm:text-2xl">GTA6 Forum</span>
         </Link>
         <Button asChild variant="ghost" size="icon" className="ml-auto sm:hidden" aria-label="Search"><Link to="/search" search={{ q: undefined }}><Search /></Link></Button>
         <form className="mx-auto hidden w-full max-w-xs sm:block transition-all focus-within:max-w-md" onSubmit={(e) => { e.preventDefault(); nav({ to: "/search", search: { q } }); }}>

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/events_/$slug")({
   loader: async ({ params }) => { const e = await getEvent(params.slug); if (!e) throw notFound(); return e; },
-  head: ({ loaderData }) => loaderData ? seo(loaderData.title, loaderData.description) : { meta: [{ title: "Unavailable · Leonida Line" }, { name: "robots", content: "noindex" }] },
+  head: ({ loaderData }) => loaderData ? seo(loaderData.title, loaderData.description) : { meta: [{ title: "Unavailable · GTA6 Forum" }, { name: "robots", content: "noindex" }] },
   component: EventPage,
 });
 

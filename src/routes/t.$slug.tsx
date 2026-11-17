@@ -16,7 +16,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 export const Route = createFileRoute("/t/$slug")({
   loader: async ({ params }) => { const d = await getTopic(params.slug); if (!d) throw notFound(); return d; },
-  head: ({ loaderData }) => loaderData ? seo(loaderData.topic.title, `Discussion in ${loaderData.topic.category.name} on Leonida Line.`) : { meta: [{ title: "Unavailable · Leonida Line" }, { name: "robots", content: "noindex" }] },
+  head: ({ loaderData }) => loaderData ? seo(loaderData.topic.title, `Discussion in ${loaderData.topic.category.name} on GTA6 Forum.`) : { meta: [{ title: "Unavailable · GTA6 Forum" }, { name: "robots", content: "noindex" }] },
   component: TopicPage,
 });
 

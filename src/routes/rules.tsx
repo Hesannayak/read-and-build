@@ -28,7 +28,7 @@ function Rules() {
       <section><h2 className="mb-3 text-xl uppercase">How to post a clip</h2>
         <div className="grid gap-3 sm:grid-cols-3">{["Capture on your console", "Upload to YouTube or Streamable", "Paste the link in a topic"].map((s, i) => <div key={s} className="rounded-xl border border-border bg-card p-4 text-center"><span className="font-display text-4xl text-primary">{i + 1}</span><p className="mt-2">{s}</p></div>)}</div>
       </section>
-      <section id="about" className="rounded-xl border border-border bg-card p-5"><h2 className="mb-2 text-lg">About</h2><p className="text-sm">Leonida Line is an unofficial, fan-run community. Not affiliated with Rockstar Games or Take-Two.</p></section>
+      <section id="about" className="rounded-xl border border-border bg-card p-5"><h2 className="mb-2 text-lg">About</h2><p className="text-sm">GTA6 Forum is an unofficial, fan-run community. Not affiliated with Rockstar Games or Take-Two.</p></section>
     </div>
   );
 }

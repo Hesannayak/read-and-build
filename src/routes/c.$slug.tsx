@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/c/$slug")({
   loader: async ({ params }) => { const c = await getCategory(params.slug); if (!c) throw notFound(); const all = await getCategories(); return { category: c, subs: all.filter((x) => x.parentSlug === c.slug) }; },
-  head: ({ loaderData }) => loaderData ? seo(loaderData.category.name, loaderData.category.description) : { meta: [{ title: "Unavailable · Leonida Line" }, { name: "robots", content: "noindex" }] },
+  head: ({ loaderData }) => loaderData ? seo(loaderData.category.name, loaderData.category.description) : { meta: [{ title: "Unavailable · GTA6 Forum" }, { name: "robots", content: "noindex" }] },
   component: CategoryPage,
 });
 

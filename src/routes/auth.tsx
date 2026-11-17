@@ -6,6 +6,7 @@ import { seo } from "@/lib/seo";
 import { getCrews, setViewerProgress, SPOILER_ORDER } from "@/lib/api";
 import { useSession } from "@/hooks/useSession";
 import { Palm } from "@/components/forum/Palm";
+import logoUrl from "@/assets/logo-sunset-badge-v2.png";
 import { CrewCard } from "@/components/forum/cards";
 import { SPOILER_LABEL } from "@/components/forum/primitives";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -16,7 +17,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import type { SpoilerLevel } from "@/types";
 
-export const Route = createFileRoute("/auth")({ head: () => seo("Sign in", "Sign in or join the Leonida Line GTA 6 community."), component: Auth });
+export const Route = createFileRoute("/auth")({ head: () => seo("Sign in", "Sign in or join the GTA6 Forum GTA 6 community."), component: Auth });
 
 function Auth() {
   const { setSignedIn } = useSession();
@@ -33,7 +34,7 @@ function Auth() {
       <Palm className="pointer-events-none absolute -bottom-10 -left-10 h-96 w-96 text-strong" />
       <Palm className="pointer-events-none absolute -right-16 top-10 h-72 w-72 text-strong/60" />
       <div className="relative w-full max-w-md rounded-2xl border border-border bg-card p-6">
-        <Link to="/" className="mb-5 flex items-center gap-2 text-primary"><Palm className="h-8 w-8" /><span className="font-display uppercase text-heading">Leonida Line</span></Link>
+        <Link to="/" className="mb-5 flex items-center gap-2 text-primary"><img src={logoUrl} alt="GTA6 Forum logo" width={1024} height={1024} className="h-12 w-12 rounded-full" /><span className="font-display uppercase text-heading">GTA6 Forum</span></Link>
         {step === 1 ? (
           <Tabs defaultValue="signin">
             <TabsList className="mb-4 grid w-full grid-cols-2 bg-inset"><TabsTrigger value="signin">Sign in</TabsTrigger><TabsTrigger value="signup">Create account</TabsTrigger></TabsList>
