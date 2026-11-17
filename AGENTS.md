@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Forum architecture
+- All data access goes through `src/lib/api.ts` (currently resolving `src/data/mock.ts`); components never import mocks — this is the seam for the real backend.
+- Shared types live in `src/types.ts`, field names mirror future DB columns.
+- Spoiler/progress filtering lives in `api.ts`, not components, so it can move server-side.
+- Session comes only from `useSession()` (mocked, dev toggle bottom-left).
+- Detail pages that share a URL prefix with a list page use the trailing-underscore form (`crews_.$slug.tsx`) because list pages have no Outlet.

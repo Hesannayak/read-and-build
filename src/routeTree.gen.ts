@@ -10,33 +10,271 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as ClipsRouteImport } from './routes/clips'
+import { Route as CrewsRouteImport } from './routes/crews'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as GuidesRouteImport } from './routes/guides'
+import { Route as LeonidaRouteImport } from './routes/leonida'
+import { Route as ModRouteImport } from './routes/mod'
+import { Route as NewRouteImport } from './routes/new'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as RulesRouteImport } from './routes/rules'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as CSlugRouteImport } from './routes/c.$slug'
+import { Route as CrewsSlugRouteImport } from './routes/crews_.$slug'
+import { Route as EventsSlugRouteImport } from './routes/events_.$slug'
+import { Route as GuidesChecklistRouteImport } from './routes/guides_.$checklist'
+import { Route as TSlugRouteImport } from './routes/t.$slug'
+import { Route as UHandleRouteImport } from './routes/u.$handle'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClipsRoute = ClipsRouteImport.update({
+  id: '/clips',
+  path: '/clips',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrewsRoute = CrewsRouteImport.update({
+  id: '/crews',
+  path: '/crews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidesRoute = GuidesRouteImport.update({
+  id: '/guides',
+  path: '/guides',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeonidaRoute = LeonidaRouteImport.update({
+  id: '/leonida',
+  path: '/leonida',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ModRoute = ModRouteImport.update({
+  id: '/mod',
+  path: '/mod',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewRoute = NewRouteImport.update({
+  id: '/new',
+  path: '/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RulesRoute = RulesRouteImport.update({
+  id: '/rules',
+  path: '/rules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CSlugRoute = CSlugRouteImport.update({
+  id: '/c/$slug',
+  path: '/c/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrewsSlugRoute = CrewsSlugRouteImport.update({
+  id: '/crews_/$slug',
+  path: '/crews/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsSlugRoute = EventsSlugRouteImport.update({
+  id: '/events_/$slug',
+  path: '/events/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuidesChecklistRoute = GuidesChecklistRouteImport.update({
+  id: '/guides_/$checklist',
+  path: '/guides/$checklist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TSlugRoute = TSlugRouteImport.update({
+  id: '/t/$slug',
+  path: '/t/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UHandleRoute = UHandleRouteImport.update({
+  id: '/u/$handle',
+  path: '/u/$handle',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/clips': typeof ClipsRoute
+  '/crews': typeof CrewsRoute
+  '/events': typeof EventsRoute
+  '/guides': typeof GuidesRoute
+  '/leonida': typeof LeonidaRoute
+  '/mod': typeof ModRoute
+  '/new': typeof NewRoute
+  '/notifications': typeof NotificationsRoute
+  '/rules': typeof RulesRoute
+  '/search': typeof SearchRoute
+  '/settings': typeof SettingsRoute
+  '/c/$slug': typeof CSlugRoute
+  '/crews/$slug': typeof CrewsSlugRoute
+  '/events/$slug': typeof EventsSlugRoute
+  '/guides/$checklist': typeof GuidesChecklistRoute
+  '/t/$slug': typeof TSlugRoute
+  '/u/$handle': typeof UHandleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/clips': typeof ClipsRoute
+  '/crews': typeof CrewsRoute
+  '/events': typeof EventsRoute
+  '/guides': typeof GuidesRoute
+  '/leonida': typeof LeonidaRoute
+  '/mod': typeof ModRoute
+  '/new': typeof NewRoute
+  '/notifications': typeof NotificationsRoute
+  '/rules': typeof RulesRoute
+  '/search': typeof SearchRoute
+  '/settings': typeof SettingsRoute
+  '/c/$slug': typeof CSlugRoute
+  '/crews/$slug': typeof CrewsSlugRoute
+  '/events/$slug': typeof EventsSlugRoute
+  '/guides/$checklist': typeof GuidesChecklistRoute
+  '/t/$slug': typeof TSlugRoute
+  '/u/$handle': typeof UHandleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
+  '/clips': typeof ClipsRoute
+  '/crews': typeof CrewsRoute
+  '/events': typeof EventsRoute
+  '/guides': typeof GuidesRoute
+  '/leonida': typeof LeonidaRoute
+  '/mod': typeof ModRoute
+  '/new': typeof NewRoute
+  '/notifications': typeof NotificationsRoute
+  '/rules': typeof RulesRoute
+  '/search': typeof SearchRoute
+  '/settings': typeof SettingsRoute
+  '/c/$slug': typeof CSlugRoute
+  '/crews_/$slug': typeof CrewsSlugRoute
+  '/events_/$slug': typeof EventsSlugRoute
+  '/guides_/$checklist': typeof GuidesChecklistRoute
+  '/t/$slug': typeof TSlugRoute
+  '/u/$handle': typeof UHandleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/clips'
+    | '/crews'
+    | '/events'
+    | '/guides'
+    | '/leonida'
+    | '/mod'
+    | '/new'
+    | '/notifications'
+    | '/rules'
+    | '/search'
+    | '/settings'
+    | '/c/$slug'
+    | '/crews/$slug'
+    | '/events/$slug'
+    | '/guides/$checklist'
+    | '/t/$slug'
+    | '/u/$handle'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/auth'
+    | '/clips'
+    | '/crews'
+    | '/events'
+    | '/guides'
+    | '/leonida'
+    | '/mod'
+    | '/new'
+    | '/notifications'
+    | '/rules'
+    | '/search'
+    | '/settings'
+    | '/c/$slug'
+    | '/crews/$slug'
+    | '/events/$slug'
+    | '/guides/$checklist'
+    | '/t/$slug'
+    | '/u/$handle'
+  id:
+    | '__root__'
+    | '/'
+    | '/auth'
+    | '/clips'
+    | '/crews'
+    | '/events'
+    | '/guides'
+    | '/leonida'
+    | '/mod'
+    | '/new'
+    | '/notifications'
+    | '/rules'
+    | '/search'
+    | '/settings'
+    | '/c/$slug'
+    | '/crews_/$slug'
+    | '/events_/$slug'
+    | '/guides_/$checklist'
+    | '/t/$slug'
+    | '/u/$handle'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthRoute: typeof AuthRoute
+  ClipsRoute: typeof ClipsRoute
+  CrewsRoute: typeof CrewsRoute
+  EventsRoute: typeof EventsRoute
+  GuidesRoute: typeof GuidesRoute
+  LeonidaRoute: typeof LeonidaRoute
+  ModRoute: typeof ModRoute
+  NewRoute: typeof NewRoute
+  NotificationsRoute: typeof NotificationsRoute
+  RulesRoute: typeof RulesRoute
+  SearchRoute: typeof SearchRoute
+  SettingsRoute: typeof SettingsRoute
+  CSlugRoute: typeof CSlugRoute
+  CrewsSlugRoute: typeof CrewsSlugRoute
+  EventsSlugRoute: typeof EventsSlugRoute
+  GuidesChecklistRoute: typeof GuidesChecklistRoute
+  TSlugRoute: typeof TSlugRoute
+  UHandleRoute: typeof UHandleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +286,155 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clips': {
+      id: '/clips'
+      path: '/clips'
+      fullPath: '/clips'
+      preLoaderRoute: typeof ClipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crews': {
+      id: '/crews'
+      path: '/crews'
+      fullPath: '/crews'
+      preLoaderRoute: typeof CrewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides': {
+      id: '/guides'
+      path: '/guides'
+      fullPath: '/guides'
+      preLoaderRoute: typeof GuidesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leonida': {
+      id: '/leonida'
+      path: '/leonida'
+      fullPath: '/leonida'
+      preLoaderRoute: typeof LeonidaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mod': {
+      id: '/mod'
+      path: '/mod'
+      fullPath: '/mod'
+      preLoaderRoute: typeof ModRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new': {
+      id: '/new'
+      path: '/new'
+      fullPath: '/new'
+      preLoaderRoute: typeof NewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rules': {
+      id: '/rules'
+      path: '/rules'
+      fullPath: '/rules'
+      preLoaderRoute: typeof RulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/c/$slug': {
+      id: '/c/$slug'
+      path: '/c/$slug'
+      fullPath: '/c/$slug'
+      preLoaderRoute: typeof CSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crews_/$slug': {
+      id: '/crews_/$slug'
+      path: '/crews/$slug'
+      fullPath: '/crews/$slug'
+      preLoaderRoute: typeof CrewsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events_/$slug': {
+      id: '/events_/$slug'
+      path: '/events/$slug'
+      fullPath: '/events/$slug'
+      preLoaderRoute: typeof EventsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guides_/$checklist': {
+      id: '/guides_/$checklist'
+      path: '/guides/$checklist'
+      fullPath: '/guides/$checklist'
+      preLoaderRoute: typeof GuidesChecklistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/t/$slug': {
+      id: '/t/$slug'
+      path: '/t/$slug'
+      fullPath: '/t/$slug'
+      preLoaderRoute: typeof TSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/u/$handle': {
+      id: '/u/$handle'
+      path: '/u/$handle'
+      fullPath: '/u/$handle'
+      preLoaderRoute: typeof UHandleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthRoute: AuthRoute,
+  ClipsRoute: ClipsRoute,
+  CrewsRoute: CrewsRoute,
+  EventsRoute: EventsRoute,
+  GuidesRoute: GuidesRoute,
+  LeonidaRoute: LeonidaRoute,
+  ModRoute: ModRoute,
+  NewRoute: NewRoute,
+  NotificationsRoute: NotificationsRoute,
+  RulesRoute: RulesRoute,
+  SearchRoute: SearchRoute,
+  SettingsRoute: SettingsRoute,
+  CSlugRoute: CSlugRoute,
+  CrewsSlugRoute: CrewsSlugRoute,
+  EventsSlugRoute: EventsSlugRoute,
+  GuidesChecklistRoute: GuidesChecklistRoute,
+  TSlugRoute: TSlugRoute,
+  UHandleRoute: UHandleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
