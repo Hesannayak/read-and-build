@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { seo } from "@/lib/seo";
+import eventsArt from "@/assets/events-rooftop-jet.jpg";
+import { SectionHero } from "@/components/forum/SectionHero";
 import { getEvents } from "@/lib/api";
-import { EventCountdown, PageHeader } from "@/components/forum/primitives";
+import { EventCountdown } from "@/components/forum/primitives";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const Route = createFileRoute("/events")({ head: () => seo("Events", "Weekly clip contests, meetups and community events."), component: Events });
@@ -11,7 +13,7 @@ function Events() {
   const { data } = useQuery({ queryKey: ["events"], queryFn: getEvents });
   return (
     <div>
-      <PageHeader title="Events" />
+      <SectionHero src={eventsArt} alt="Illustrated pair at a rooftop party as a jet crosses the sunset" title="Events" sub="Launch watches, meetups and community nights." />
       <div className="space-y-3">
         {!data && <Skeleton className="h-24 bg-card" />}
         {data?.map((e) => (

@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { seo } from "@/lib/seo";
+import guidesArt from "@/assets/guides-convertible-road.jpg";
+import { SectionHero } from "@/components/forum/SectionHero";
 import { getChecklists } from "@/lib/api";
 import { TopicList } from "@/components/forum/TopicList";
-import { PageHeader, ProgressBar } from "@/components/forum/primitives";
+import { ProgressBar } from "@/components/forum/primitives";
 
 export const Route = createFileRoute("/guides")({ head: () => seo("Guides & Secrets", "Community GTA 6 guides, checklists and easter eggs."), component: Guides });
 
@@ -11,7 +13,7 @@ function Guides() {
   const { data } = useQuery({ queryKey: ["checklists"], queryFn: getChecklists });
   return (
     <div>
-      <PageHeader title="Guides & Secrets" />
+      <SectionHero src={guidesArt} alt="Illustrated rider and driver checking a map on a swamp highway at sunset" title="Guides & Secrets" sub="Routes, collectibles and hidden spots, mapped by the community." />
       <div className="grid gap-5 lg:grid-cols-[1fr_260px]">
         <TopicList filter={{ categorySlug: "guides" }} emptyTitle="No guides yet. Be the first cartographer." />
         <aside className="space-y-3">
