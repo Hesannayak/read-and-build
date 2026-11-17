@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export const Route = createFileRoute("/clips")({ head: () => seo("Clips & Photos", "Community GTA 6 clips, stunts, fails and photo mode shots."), component: Clips });
+export const Route = createFileRoute("/clips")({ head: () => seo("GTA 6 Clips, Stunts & Photo Mode", "Watch community GTA 6 clips, stunts, fails and photo mode shots on GTA6 Forum.", { path: "/clips" }), component: Clips });
 
 function Clips() {
   const { data: clips } = useQuery({ queryKey: ["clips"], queryFn: getClips });

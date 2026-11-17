@@ -7,7 +7,7 @@ import { getEvents } from "@/lib/api";
 import { EventCountdown } from "@/components/forum/primitives";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export const Route = createFileRoute("/events")({ head: () => seo("Events", "Weekly clip contests, meetups and community events."), component: Events });
+export const Route = createFileRoute("/events")({ head: () => seo("GTA 6 Events & Clip Contests", "Weekly GTA 6 clip contests, meetups and community events on GTA6 Forum.", { path: "/events" }), component: Events });
 
 function Events() {
   const { data } = useQuery({ queryKey: ["events"], queryFn: getEvents });

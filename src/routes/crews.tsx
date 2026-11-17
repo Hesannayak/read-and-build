@@ -16,7 +16,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export const Route = createFileRoute("/crews")({ head: () => seo("Crews", "Find a GTA 6 crew by region, language, playstyle or platform."), component: Crews });
+export const Route = createFileRoute("/crews")({ head: () => seo("GTA 6 Crews — Find a Crew", "Find a GTA 6 crew on GTA6 Forum by region, language, playstyle or platform.", { path: "/crews" }), component: Crews });
 
 const KINDS = [["regional", "Regional"], ["language", "Language"], ["playstyle", "Playstyle"], ["interest", "Interest"], ["platform", "Platform"]] as const;
 function Crews() {

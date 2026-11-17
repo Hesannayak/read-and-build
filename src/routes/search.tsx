@@ -11,7 +11,7 @@ import type { FeedFilter } from "@/types";
 
 export const Route = createFileRoute("/search")({
   validateSearch: (s: Record<string, unknown>): { q?: string | undefined } => ({ q: typeof s["q"] === "string" ? s["q"] : undefined }),
-  head: () => seo("Search", "Search GTA 6 topics, spoiler-safe by default."),
+  head: () => seo("Search", "Search GTA 6 topics on GTA6 Forum, spoiler-safe by default.", { noindex: true }),
   component: SearchPage,
 });
 

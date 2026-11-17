@@ -9,7 +9,7 @@ import { Palm } from "@/components/forum/Palm";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/leonida")({ head: () => seo("Leonida regions", "Explore the six regions of Leonida."), component: Hub });
+export const Route = createFileRoute("/leonida")({ head: () => seo("GTA 6 Map — Leonida Regions", "Explore the six GTA 6 regions of Leonida, from Vice City to the swamps, with GTA6 Forum.", { path: "/leonida" }), component: Hub });
 
 function Hub() {
   const { data } = useQuery({ queryKey: ["regions"], queryFn: getRegions });

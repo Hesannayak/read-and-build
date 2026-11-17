@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import type { SpoilerLevel } from "@/types";
 
-export const Route = createFileRoute("/settings")({ head: () => seo("Settings", "Account, story progress and notification settings."), component: SettingsPage });
+export const Route = createFileRoute("/settings")({ head: () => seo("Settings", "Account, story progress and notification settings.", { noindex: true }), component: SettingsPage });
 
 const Section = ({ title, children, danger }: { title: string; children: React.ReactNode; danger?: boolean }) => (
   <section className={`space-y-4 rounded-xl border bg-card p-5 ${danger ? "border-destructive/60" : "border-border"}`}><h2 className="text-lg">{title}</h2>{children}</section>

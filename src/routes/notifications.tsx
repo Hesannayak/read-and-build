@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/notifications")({ head: () => seo("Notifications", "Replies, mentions, badges and crew activity."), component: Notes });
+export const Route = createFileRoute("/notifications")({ head: () => seo("Notifications", "Replies, mentions, badges and crew activity.", { noindex: true }), component: Notes });
 const ICON = { reply: MessageSquare, mention: AtSign, badge: Award, crew: Users, mod: Shield };
 
 function Notes() {

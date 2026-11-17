@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/mod")({ head: () => ({ meta: [...seo("Moderation", "Moderator tools.").meta, { name: "robots", content: "noindex" }] }), component: Mod });
+export const Route = createFileRoute("/mod")({ head: () => seo("Moderation", "Moderator tools.", { noindex: true }), component: Mod });
 
 function Mod() {
   const { user } = useSession();

@@ -7,7 +7,7 @@ import { getChecklists } from "@/lib/api";
 import { TopicList } from "@/components/forum/TopicList";
 import { ProgressBar } from "@/components/forum/primitives";
 
-export const Route = createFileRoute("/guides")({ head: () => seo("Guides & Secrets", "Community GTA 6 guides, checklists and easter eggs."), component: Guides });
+export const Route = createFileRoute("/guides")({ head: () => seo("GTA 6 Guides, Secrets & Easter Eggs", "Community GTA 6 guides, collectible checklists, secrets and easter eggs on GTA6 Forum.", { path: "/guides" }), component: Guides });
 
 function Guides() {
   const { data } = useQuery({ queryKey: ["checklists"], queryFn: getChecklists });

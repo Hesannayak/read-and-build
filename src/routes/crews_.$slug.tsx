@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 
 export const Route = createFileRoute("/crews_/$slug")({
   loader: async ({ params }) => { const c = await getCrew(params.slug); if (!c) throw notFound(); const members = await Promise.all(["neon_flamingo", "arjun_rides", "capivara_br", "lena.kraus", "priya_snaps", "joao.drift"].map(getUser)); return { crew: c, members: members.filter((m) => m !== null) }; },
-  head: ({ loaderData }) => loaderData ? seo(loaderData.crew.name, loaderData.crew.description) : { meta: [{ title: "Unavailable · GTA6 Forum" }, { name: "robots", content: "noindex" }] },
+  head: ({ loaderData }) => loaderData ? seo(`${loaderData.crew.name} — GTA 6 Crew`, loaderData.crew.description, { path: `/crews/${loaderData.crew.slug}` }) : { meta: [{ title: "Unavailable · GTA6 Forum" }, { name: "robots", content: "noindex" }] },
   component: CrewPage,
 });
 

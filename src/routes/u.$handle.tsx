@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Route = createFileRoute("/u/$handle")({
   loader: async ({ params }) => { const u = await getUser(params.handle); if (!u) throw notFound(); return u; },
-  head: ({ loaderData }) => loaderData ? seo(`@${loaderData.handle}`, `${loaderData.displayName}'s profile on GTA6 Forum.`) : { meta: [{ title: "Unavailable · GTA6 Forum" }, { name: "robots", content: "noindex" }] },
+  head: ({ loaderData }) => loaderData ? seo(`@${loaderData.handle}`, `${loaderData.displayName}'s profile on GTA6 Forum.`, { path: `/u/${loaderData.handle}` }) : { meta: [{ title: "Unavailable · GTA6 Forum" }, { name: "robots", content: "noindex" }] },
   component: Profile,
 });
 

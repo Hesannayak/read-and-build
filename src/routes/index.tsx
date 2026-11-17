@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import type { FeedFilter, RegionSlug, SpoilerLevel } from "@/types";
 
 export const Route = createFileRoute("/")({
-  head: () => seo("Home", "Latest GTA 6 topics from Leonida, filtered to your story progress."),
+  head: () => seo("GTA6 Forum — GTA 6 Community, News, Guides & Clips", "GTA6 Forum is the fan community for Grand Theft Auto VI: GTA 6 news, guides, clips, crews and spoiler-safe story discussion.", { path: "/", fullTitle: true }),
   component: Home,
 });
 
@@ -45,7 +45,7 @@ function Home() {
   const [filter, setFilter] = useState<FeedFilter>({ tab: "latest" });
   return (
     <div className="space-y-4">
-      <SectionHero src={heroDuo} alt="Illustrated pair lounging on a red muscle car at sunset by the Vice City shore" title="Tonight in Leonida" sub="Clips, guides and spoiler-safe story talk." tall eager />
+      <SectionHero src={heroDuo} alt="Illustrated pair lounging on a red muscle car at sunset by the Vice City shore" title="GTA6 Forum" sub="Tonight in Leonida — GTA 6 clips, guides and spoiler-safe story talk." tall eager />
       {!user && (
         <div className="sunset-border flex flex-wrap items-center justify-between gap-3 rounded-xl p-4">
           <div><p className="font-display text-heading">Welcome to GTA6 Forum.</p><p className="text-sm text-muted-foreground">Spoiler-safe talk, clips and crews for GTA 6 fans.</p></div>

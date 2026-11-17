@@ -4,7 +4,7 @@ import { PageHeader, SPOILER_HINT, SPOILER_LABEL, SpoilerBadge } from "@/compone
 import { SPOILER_ORDER } from "@/lib/api";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/rules")({ head: () => seo("Rules — Start here", "Community rules, spoiler levels and how to post a clip."), component: Rules });
+export const Route = createFileRoute("/rules")({ head: () => seo("Forum Rules & Spoiler Levels", "GTA6 Forum community rules, spoiler levels and how to post GTA 6 clips.", { path: "/rules" }), component: Rules });
 
 const RULES = [
   ["Tag spoilers. Always.", "Set the right spoiler level and keep spoilers out of titles. This is the rule we enforce most strictly."],

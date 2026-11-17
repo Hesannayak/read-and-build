@@ -17,7 +17,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import type { SpoilerLevel } from "@/types";
 
-export const Route = createFileRoute("/auth")({ head: () => seo("Sign in", "Sign in or join the GTA6 Forum GTA 6 community."), component: Auth });
+export const Route = createFileRoute("/auth")({ head: () => seo("Sign in or Join", "Sign in or join GTA6 Forum, the GTA 6 fan community.", { noindex: true }), component: Auth });
 
 function Auth() {
   const { setSignedIn } = useSession();

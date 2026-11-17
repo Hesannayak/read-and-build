@@ -74,13 +74,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "GTA6 Forum — the GTA 6 fan community" },
+      { title: "GTA6 Forum — GTA 6 Community, News, Guides & Clips" },
       { name: "description", content: "Unofficial GTA 6 fan community: clips, guides, crews and spoiler-safe story talk." },
-      { property: "og:title", content: "GTA6 Forum — the GTA 6 fan community" },
+      { property: "og:title", content: "GTA6 Forum — GTA 6 Community, News, Guides & Clips" },
       { property: "og:description", content: "Unofficial GTA 6 fan community: clips, guides, crews and spoiler-safe story talk." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:site_name", content: "GTA6 Forum" },
     ],
     links: [
       {
@@ -92,6 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Mono:wght@400;600&family=Jost:wght@400;500;600;700&display=swap" },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify({ "@context": "https://schema.org", "@type": "WebSite", name: "GTA6 Forum", alternateName: ["GTA 6 Forum", "GTA VI Forum"], url: "/", potentialAction: { "@type": "SearchAction", target: "/search?q={search_term_string}", "query-input": "required name=search_term_string" } }) }],
   }),
   shellComponent: RootShell,
   component: RootComponent,

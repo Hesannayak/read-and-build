@@ -15,7 +15,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import type { SpoilerLevel } from "@/types";
 
-export const Route = createFileRoute("/new")({ head: () => seo("New topic", "Start a new GTA 6 discussion."), component: NewTopic });
+export const Route = createFileRoute("/new")({ head: () => seo("New topic", "Start a new GTA 6 discussion.", { noindex: true }), component: NewTopic });
 
 function NewTopic() {
   const nav = useNavigate();

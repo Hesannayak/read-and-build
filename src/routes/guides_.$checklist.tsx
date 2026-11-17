@@ -5,7 +5,7 @@ import { PageHeader, Avatar } from "@/components/forum/primitives";
 import { Checkbox } from "@/components/ui/checkbox";
 
 export const Route = createFileRoute("/guides_/$checklist")({
-  head: ({ params }) => seo(`${params.checklist} checklist`, "Community-tracked GTA 6 collectibles checklist."),
+  head: ({ params }) => seo(`GTA 6 ${params.checklist} checklist`, "Community-tracked GTA 6 collectibles checklist on GTA6 Forum.", { path: `/guides/${params.checklist}` }),
   component: Checklist,
 });
 
