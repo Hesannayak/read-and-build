@@ -93,18 +93,18 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.220 0.070 305.0);
+  --background: oklch(0.210 0.075 300.0);
   --foreground: oklch(0.930 0.030 320.0);
   --heading: oklch(0.965 0.025 330.0);
-  --card: oklch(0.285 0.085 305.0);
+  --card: oklch(0.280 0.090 302.0);
   --card-foreground: oklch(0.930 0.030 320.0);
-  --popover: oklch(0.285 0.085 305.0);
+  --popover: oklch(0.280 0.090 302.0);
   --popover-foreground: oklch(0.930 0.030 320.0);
-  --surface: oklch(0.285 0.085 305.0);
-  --inset: oklch(0.190 0.060 305.0);
-  --strong: oklch(0.360 0.110 310.0);
-  --primary: oklch(0.680 0.260 340.0);
-  --primary-foreground: oklch(0.220 0.070 305.0);
+  --surface: oklch(0.280 0.090 302.0);
+  --inset: oklch(0.180 0.065 300.0);
+  --strong: oklch(0.360 0.120 305.0);
+  --primary: oklch(0.620 0.240 300.0);
+  --primary-foreground: oklch(0.965 0.025 330.0);
   --secondary: oklch(0.360 0.110 310.0);
   --secondary-foreground: oklch(0.930 0.030 320.0);
   --muted: oklch(0.285 0.085 305.0);
@@ -148,6 +148,11 @@
   html { color-scheme: dark; }
   body {
     background-color: var(--color-background);
+    background-image:
+      radial-gradient(ellipse 80% 60% at 85% -10%, oklch(0.450 0.200 330.0 / 35%), transparent 60%),
+      radial-gradient(ellipse 70% 50% at -10% 100%, oklch(0.400 0.180 290.0 / 30%), transparent 60%),
+      linear-gradient(160deg, oklch(0.240 0.090 295.0) 0%, oklch(0.210 0.075 300.0) 45%, oklch(0.230 0.100 325.0) 100%);
+    background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-size: 16px;
@@ -168,7 +173,7 @@
   background-image: repeating-linear-gradient(0deg, oklch(0 0 0 / 35%) 0 2px, transparent 2px 4px);
 }
 @utility nav-active {
-  background: oklch(0.680 0.260 340.0 / 14%);
+  background: oklch(0.620 0.240 300.0 / 18%);
   color: var(--color-primary);
 }
 @utility unread-title {
